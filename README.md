@@ -61,7 +61,7 @@
 | prefecture    | integer    | null: false                    |
 | manicipality  | string     | null: false                    |
 | address       | string     | null: false                    |
-| building_name | integer    | null: false                    |
+| building_name | string     |                                |
 | phone_number  | integer    | null: false                    |
 | order         | references | null: false, foreign_key: true |
 
