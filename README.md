@@ -18,20 +18,20 @@
 
 ## itemsテーブル
 
-| Column           | Type       | Options                        |
-| ---------------- | ---------- | ------------------------------ |
-| name             | string     | null: false                    | 
-| image            | string     | null: false                    |
-| explanation      | text       | null: false                    |
-| category         | integer    | null: false                    |
-| condition        | integer    | null: false                    |
-| delivery_pay     | integer    | null: false                    |
-| delivery_source  | integer    | null: false                    |
-| delivery_time    | integer    | null: false                    |
-| price            | integer    | null: false                    |
-| sales_commission | integer    | null: false                    |
-| sales_profit     | integer    | null: false                    |
-| user             | references | null: false, foreign_key: true |
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| name               | string     | null: false                    | 
+| image              | string     | null: false                    |
+| explanation        | text       | null: false                    |
+| category_id        | integer    | null: false                    |
+| condition_id       | integer    | null: false                    |
+| delivery_pay_id    | integer    | null: false                    |
+| delivery_source_id | integer    | null: false                    |
+| delivery_time_id   | integer    | null: false                    |
+| price              | integer    | null: false                    |
+| sales_commission   | integer    | null: false                    |
+| sales_profit       | integer    | null: false                    |
+| user               | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
@@ -44,7 +44,6 @@
 | ----------- | ---------- | ------------------------------ |
 | item        | references | null: false, foreign_key: true | 
 | user        | references | null: false, foreign_key: true |
-| destination | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
@@ -58,11 +57,11 @@
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
 | post_code     | integer    | null: false                    | 
-| prefecture    | integer    | null: false                    |
+| prefecture_id | integer    | null: false                    |
 | manicipality  | string     | null: false                    |
 | address       | string     | null: false                    |
 | building_name | string     |                                |
-| phone_number  | integer    | null: false                    |
+| phone_number  | string     | null: false                    |
 | order         | references | null: false, foreign_key: true |
 
 ### Association

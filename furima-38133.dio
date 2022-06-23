@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="Y2rRuFL6ub8d7-tLGue-" name="ページ1">
-        <mxGraphModel dx="683" dy="117" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="655" dy="428" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -17,7 +17,7 @@
                         <mxRectangle x="120" y="80" width="60" height="26" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="10" value="・商品ID（PK）&#10;・ユーザーID（FK）&#10;・商品名&#10;・商品画像&#10;・商品説明情報&#10;・カテゴリー&#10;・商品状態情報&#10;・配送料負担&#10;・発送元情報&#10;・発送日数&#10;・価格&#10;・販売手数料&#10;・販売利益" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="9" vertex="1">
+                <mxCell id="10" value="・商品ID（PK）&#10;・ユーザーID（FK）&#10;・商品名&#10;・商品画像&#10;・商品説明情報&#10;・カテゴリー&#10;・商品状態情報&#10;・配送料負担&#10;・発送元情報&#10;・発送日数&#10;・価格" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="9" vertex="1">
                     <mxGeometry y="26" width="200" height="224" as="geometry"/>
                 </mxCell>
                 <mxCell id="13" value="購入記録(Orders)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
@@ -25,7 +25,7 @@
                         <mxRectangle x="120" y="80" width="60" height="26" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="14" value="・注文ID（PK）&#10;・ユーザー(顧客)ID（FK）&#10;・商品ID（FK）&#10;・発送先ID（FK）" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="13" vertex="1">
+                <mxCell id="14" value="・注文ID（PK）&#10;・ユーザー(顧客)ID（FK）&#10;・商品ID（FK）" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="13" vertex="1">
                     <mxGeometry y="26" width="200" height="88" as="geometry"/>
                 </mxCell>
                 <mxCell id="22" value="エンティティ名(テーブル名)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
