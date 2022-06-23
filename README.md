@@ -29,8 +29,6 @@
 | delivery_source_id | integer    | null: false                    |
 | delivery_time_id   | integer    | null: false                    |
 | price              | integer    | null: false                    |
-| sales_commission   | integer    | null: false                    |
-| sales_profit       | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
 ### Association
