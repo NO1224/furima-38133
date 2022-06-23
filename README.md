@@ -21,7 +21,6 @@
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
 | name               | string     | null: false                    | 
-| image              | string     | null: false                    |
 | explanation        | text       | null: false                    |
 | category_id        | integer    | null: false                    |
 | condition_id       | integer    | null: false                    |
@@ -54,7 +53,7 @@
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
-| post_code     | integer    | null: false                    | 
+| post_code     | string    | null: false                    | 
 | prefecture_id | integer    | null: false                    |
 | manicipality  | string     | null: false                    |
 | address       | string     | null: false                    |
