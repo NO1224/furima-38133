@@ -48,12 +48,11 @@
 - has_one :destination
 
 
-
 ## destinationsテーブル
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
-| post_code     | string    | null: false                    | 
+| post_code     | string     | null: false                    | 
 | prefecture_id | integer    | null: false                    |
 | municipality  | string     | null: false                    |
 | address       | string     | null: false                    |
