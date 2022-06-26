@@ -8,12 +8,11 @@ class User < ApplicationRecord
   VALID_NAME_REGEX = /\A[ぁ-んァ-ヶ一-龥々ー]+\z/.freeze
   VALID_NAMEKANA_REGEX = /\A[ァ-ヶー－]+\z/.freeze
 
-  validates :password, format: { with: VALID_PASSWORD_REGEX,
-                                 message: 'include both letters and numbers'},
-                                 allow_blank: true        
-
   with_options presence: true do
     validates :nickname
+    validates :password, format: { allow_blank: true,
+                                   with: VALID_PASSWORD_REGEX,
+                                   message: 'include both letters and numbers'}
     validates :last_name, format: { allow_blank: true,
                                     with: VALID_NAME_REGEX, 
                                     message: 'full-width kanji, hiragana and katakana characters'}
