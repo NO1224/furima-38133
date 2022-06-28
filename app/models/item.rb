@@ -11,6 +11,7 @@ class Item < ApplicationRecord
   #ActiveStorageアソシエーション
   has_one_attached :image
 
+  #画像ファイル拡張子指定
   validate :image_content_type, if: :was_attached?
 
   def image_content_type
@@ -21,12 +22,13 @@ class Item < ApplicationRecord
   def was_attached?
     self.image.attached?
   end
+  #//画像ファイル拡張子指定
 
   with_options presence: true do
     validates :image
-    validates :name
-    validates :explanation
-    validates :price,      numericality: { allow_blank: true,
+    validates :name,        length: {maximum: 40}
+    validates :explanation, length: {maximum: 1000}
+    validates :price,       numericality: { allow_blank: true,
                                            only_integer: true, 
                                            greater_than: 300,
                                            less_than: 9999999}
