@@ -7,7 +7,7 @@ class Item < ApplicationRecord
   belongs_to :category
   belongs_to :condition
   belongs_to :delivery_pay
-  belongs_to :delivery_source
+  belongs_to :prefecture
   belongs_to :delivery_time
   #ActiveStorageアソシエーション
   has_one_attached :image
