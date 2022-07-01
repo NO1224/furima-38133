@@ -38,7 +38,7 @@ class Item < ApplicationRecord
     validates :category_id
     validates :condition_id
     validates :delivery_pay_id
-    validates :delivery_source_id
+    validates :prefecture_id
     validates :delivery_time_id
   end
 end
