@@ -10,6 +10,23 @@ class OrderForm
                 :building_name,
                 :phone_number,
                 :token #JavaScriptから添付
+
+  VALID_POSTCODE_REGEX = /\A\d{3}-\d{4}\z/
+  VALID_PHONENUMBER_REGEX = /\A\d{10,11}\z/
+
+  with_options presence: true do
+    validates :post_code, format: { allow_blank: true,
+                                    with:  VALID_POSTCODE_REGEX, 
+                                    message: 'is invalid. It not may be include hyphen(-) or not integer'}
+    validates :municipality
+    validates :address
+    validates :phone_number, format: { allow_blank: true,
+                                       with:  VALID_PHONENUMBER_REGEX, 
+                                       message: 'is invalid. It may be include hyphen(-) or not integer'}
+    validates :token
+  end
+
+  validates :prefecture_id, numericality: { other_than: 1 }
  
   # 各テーブルにデータを保存する処理
   def save
