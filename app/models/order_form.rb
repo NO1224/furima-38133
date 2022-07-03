@@ -19,7 +19,7 @@ class OrderForm
     validates :item_id
     validates :post_code, format: { allow_blank: true,
                                     with:  VALID_POSTCODE_REGEX, 
-                                    message: 'is invalid. It may not be include hyphen(-), not current-format or not integer'}
+                                    message: 'is invalid. It may not be include hyphen(-), incurrect format or not integer'}
     validates :municipality
     validates :address
     validates :phone_number, format: { allow_blank: true,
