@@ -34,7 +34,7 @@ class OrdersController < ApplicationController
   #SoldOutの条件を後ほど追加
   def contributor_soldout_confirmation
     @item = Item.find(params[:item_id])
-    redirect_to root_path if current_user == @item.user
+    redirect_to root_path if current_user == @item.user || @item.order.present?
   end
 
   def pay_item

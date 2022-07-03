@@ -3,5 +3,5 @@ class Order < ApplicationRecord
   #Tableアソシエーション
   belongs_to :user, optional: true
   belongs_to :items, optional: true
-  has_one :destination, dependent: destroy
+  has_one :destination
 end
