@@ -1,7 +1,7 @@
 class Order < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   #Tableアソシエーション
-  belongs_to :user
-  belongs_to :items
-  has_one :destination
+  belongs_to :user, optional: true
+  belongs_to :items, optional: true
+  has_one :destination, dependent: destroy
 end

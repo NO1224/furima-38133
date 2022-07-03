@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
-  before_action :contributor_soldout_confirmation
+  before_action :contributor_soldout_confirmation, only: [:index, :create]
 
   def index
     @order_form = OrderForm.new
@@ -8,7 +8,6 @@ class OrdersController < ApplicationController
 
   def create
     @order_form = OrderForm.new(order_params)
-    binding.pry
     if @order_form.valid?
       pay_item
       @order_form.save

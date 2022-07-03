@@ -15,14 +15,16 @@ class OrderForm
   VALID_PHONENUMBER_REGEX = /\A\d{10,11}\z/
 
   with_options presence: true do
+    validates :user_id
+    validates :item_id
     validates :post_code, format: { allow_blank: true,
                                     with:  VALID_POSTCODE_REGEX, 
-                                    message: 'is invalid. It not may be include hyphen(-) or not integer'}
+                                    message: 'is invalid. It may not be include hyphen(-), not current-format or not integer'}
     validates :municipality
     validates :address
     validates :phone_number, format: { allow_blank: true,
                                        with:  VALID_PHONENUMBER_REGEX, 
-                                       message: 'is invalid. It may be include hyphen(-) or not integer'}
+                                       message: 'is invalid. It may be include hyphen(-), not minimum-digits(10) or not integer'}
     validates :token
   end
 
