@@ -1,4 +1,4 @@
-class DeliverySource < ActiveHash::Base
+class Prefecture < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' }, { id: 2, name: '北海道' }, { id: 3, name: '青森県' },
     { id: 4, name: '岩手県' }, { id: 5, name: '宮城県' }, { id: 6, name: '秋田県' }, 
@@ -20,5 +20,6 @@ class DeliverySource < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :items
+  has_many :destinations
   
 end

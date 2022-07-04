@@ -24,6 +24,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    redirect_to root_path if @item.order.present?
   end
 
   def update
@@ -50,7 +51,7 @@ class ItemsController < ApplicationController
                                  :category_id,
                                  :condition_id,
                                  :delivery_pay_id,
-                                 :delivery_source_id,
+                                 :prefecture_id,
                                  :delivery_time_id,
                                  :price).merge(user_id: current_user.id)
   end

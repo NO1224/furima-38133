@@ -2,11 +2,12 @@ class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   #Tableアソシエーション
   belongs_to :user
+  has_one :order
   #ActiveHashアソシエーション
   belongs_to :category
   belongs_to :condition
   belongs_to :delivery_pay
-  belongs_to :delivery_source
+  belongs_to :prefecture
   belongs_to :delivery_time
   #ActiveStorageアソシエーション
   has_one_attached :image
@@ -37,7 +38,7 @@ class Item < ApplicationRecord
     validates :category_id
     validates :condition_id
     validates :delivery_pay_id
-    validates :delivery_source_id
+    validates :prefecture_id
     validates :delivery_time_id
   end
 end
